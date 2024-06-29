@@ -2716,90 +2716,73 @@ input, select, textarea {
 
 /* Table */
 
-	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
-	}
+.table-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
 
-	table {
-		margin: 0 0 2em 0;
-		width: 100%;
-	}
+table {
+    margin: 0 0 2em 0;
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders collapse properly */
+}
 
-		table tbody tr {
-			border: solid 1px;
-			border-left: 0;
-			border-right: 0;
-		}
+table tbody tr {
+    border: solid 1px transparent; /* Remove default border */
+}
 
-		table td {
-			padding: 0.75em 0.75em;
-		}
+table td {
+    padding: 1em; /* Increase padding for better spacing */
+    vertical-align: middle; /* Align content vertically */
+}
 
-		table th {
-			font-size: 0.9em;
-			font-weight: 400;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
-		}
+table th {
+    font-size: 0.9em;
+    font-weight: 400;
+    padding: 1em; /* Adjust padding for header cells */
+    text-align: left;
+    color: #ffffff; /* Header text color */
+}
 
-		table thead {
-			border-bottom: solid 2px;
-		}
+.table-logo {
+    width: 100px; /* Adjust width of the logo column */
+    text-align: center; /* Center align the logo */
+}
 
-		table tfoot {
-			border-top: solid 2px;
-		}
+.table-logo img {
+    max-width: 100%; /* Ensure image stays within column width */
+    height: auto;
+    vertical-align: middle; /* Align image vertically */
+}
 
-		table.alt {
-			border-collapse: separate;
-		}
+.table-text {
+    vertical-align: middle; /* Align text vertically */
+    padding-left: 1em; /* Add spacing between icon and text */
+}
 
-			table.alt tbody tr td {
-				border: solid 1px;
-				border-left-width: 0;
-				border-top-width: 0;
-			}
+.table-date {
+    min-width: 120px; /* Adjust minimum width for the date column */
+    text-align: center; /* Center align the date */
+}
 
-				table.alt tbody tr td:first-child {
-					border-left-width: 1px;
-				}
+/* Alternate row background color */
+table tbody tr:nth-child(2n + 1) {
+    background-color: rgba(255, 255, 255, 0.075);
+}
 
-			table.alt tbody tr:first-child td {
-				border-top-width: 1px;
-			}
+/* Borders and colors */
+table tbody tr {
+    border-color: rgba(255, 255, 255, 0.35);
+}
 
-			table.alt thead {
-				border-bottom: 0;
-			}
+table th,
+table thead {
+    border-bottom: solid 2px rgba(255, 255, 255, 0.35); /* Header border */
+}
 
-			table.alt tfoot {
-				border-top: 0;
-			}
-
-	table tbody tr {
-		border-color: rgba(255, 255, 255, 0.35);
-	}
-
-		table tbody tr:nth-child(2n + 1) {
-			background-color: rgba(255, 255, 255, 0.075);
-		}
-
-	table th {
-		color: #ffffff;
-	}
-
-	table thead {
-		border-bottom-color: rgba(255, 255, 255, 0.35);
-	}
-
-	table tfoot {
-		border-top-color: rgba(255, 255, 255, 0.35);
-	}
-
-	table.alt tbody tr td {
-		border-color: rgba(255, 255, 255, 0.35);
-	}
+table tfoot {
+    border-top: solid 2px rgba(255, 255, 255, 0.35); /* Footer border */
+}
 
 /* Features */
 
